@@ -232,6 +232,17 @@ export default function App() {
     e.preventDefault()
     if (!formData.nome || !formData.email || !formData.whatsapp) return
     setFormSubmitted(true)
+
+    fetch('https://webhooks.maggiodigital.com.br/webhook/webhooksite-luiz-gatti', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nome: formData.nome,
+        email: formData.email,
+        whatsapp: formData.whatsapp
+      })
+    }).catch(() => {})
+
     setTimeout(() => {
       window.open(
         `https://wa.me/5511919148575?text=${encodeURIComponent(`Olá Dr. Gatti, gostaria de agendar uma avaliação! Meu nome é ${formData.nome}`)}`,
@@ -725,7 +736,7 @@ export default function App() {
             >
               <img
                 src="resultado-destaque.webp"
-                alt="Resultado de transformação corporal"
+                alt="Resultado de preenchimento glúteo e remodelamento corporal"
                 style={{
                   width: '100%',
                   height: '100%',
@@ -844,7 +855,7 @@ export default function App() {
               marginBottom: '48px',
             }}
           >
-            {[1, 2, 3, 4].map((num, i) => (
+            {[1, 2, 3, 4, 5].map((num, i) => (
               <FadeIn key={num} delay={i * 0.1}>
                 <div
                   style={{
@@ -858,7 +869,7 @@ export default function App() {
                 >
                   <img
                     src={`resultado${num}.webp`}
-                    alt={`Resultado antes e depois ${num}`}
+                    alt={`Resultado de procedimento estético - antes e depois ${num}`}
                     style={{
                       width: '100%',
                       height: '100%',
