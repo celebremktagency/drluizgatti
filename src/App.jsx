@@ -509,8 +509,7 @@ export default function App() {
                   marginBottom: '16px',
                 }}
               >
-                Procedimentos de alta performance em estética corporal e facial. Técnicas exclusivas
-                que entregam resultados naturais, duradouros e com total segurança médica.
+                Estética corporal e facial com técnicas exclusivas, resultados naturais e total segurança médica.
               </p>
             </FadeIn>
 
@@ -524,8 +523,7 @@ export default function App() {
                   marginBottom: '32px',
                 }}
               >
-                Dr. Luiz Gatti — referência em remodelamento glúteo, bioestimuladores e
-                rejuvenescimento. São Paulo · Alphaville · Campinas
+                Dr. Luiz Gatti — referência em remodelamento glúteo, bioestimuladores e minilipo. São Paulo · Alphaville · Campinas
               </p>
             </FadeIn>
 
@@ -665,7 +663,7 @@ export default function App() {
       {/* ─── PROCEDIMENTOS ─── */}
       <section
         id="procedimentos"
-        style={{ background: colors.bgSecondary, padding: '100px 24px' }}
+        style={{ background: colors.bgPrimary, padding: '100px 24px' }}
       >
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <SectionTitle subtitle="Procedimentos" title="Excelência em cada detalhe" />
@@ -680,20 +678,20 @@ export default function App() {
               {
                 icon: '✦',
                 title: 'Remodelamento Glúteo',
-                desc: 'Esculpimos o contorno ideal para o seu corpo com técnicas avançadas de preenchimento. Volume, definição e naturalidade em um único procedimento — com resultados que duram.',
-                highlights: ['Aumento de volume personalizado', 'Correção de depressão trocantérica', 'Resultado permanente e natural'],
+                desc: 'Volume, definição e naturalidade em um único procedimento com técnicas avançadas de preenchimento.',
+                highlights: ['Volume personalizado', 'Correção trocantérica', 'Resultado permanente'],
               },
               {
                 icon: '◇',
                 title: 'Bioestimuladores de Colágeno',
-                desc: 'Desperte a produção natural de colágeno do seu corpo. Firmeza, sustentação e rejuvenescimento progressivo — sem cortes, sem afastamento da rotina.',
+                desc: 'Firmeza, sustentação e rejuvenescimento progressivo — sem cortes e sem afastamento da rotina.',
                 highlights: ['Firmeza e sustentação real', 'Resultados progressivos', 'Zero downtime'],
               },
               {
                 icon: '⬡',
-                title: 'Endolaser Facial e Corporal',
-                desc: 'Tecnologia de ponta para combater flacidez e remodelar contornos. Estímulo intenso de colágeno com recuperação rápida e resultados visíveis desde a primeira sessão.',
-                highlights: ['Redução de flacidez avançada', 'Remodelamento de contornos', 'Recuperação expressa'],
+                title: 'Minilipo',
+                desc: 'Remoção de gordura localizada com precisão e recuperação rápida. Contornos definidos de forma minimamente invasiva.',
+                highlights: ['Gordura localizada', 'Recuperação expressa', 'Contornos definidos'],
               },
             ].map((card, i) => (
               <ProcedureCard key={card.title} card={card} delay={i * 0.1} />
@@ -778,9 +776,7 @@ export default function App() {
                   marginBottom: '32px',
                 }}
               >
-                Com técnicas avançadas de preenchimento glúteo e bioestimuladores, você alcança o
-                corpo que sempre desejou — em uma única sessão, com anestesia local, segurança
-                total e resultados naturais que respeitam a harmonia do seu corpo.
+                Preenchimento glúteo, bioestimuladores e minilipo — resultados naturais com segurança total e recuperação rápida.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -823,7 +819,7 @@ export default function App() {
       <SectionSeparator />
 
       {/* ─── RESULTADOS ─── */}
-      <section id="resultados" style={{ background: colors.bgSecondary, padding: '100px 24px' }}>
+      <section id="resultados" style={{ background: colors.bgPrimary, padding: '100px 24px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <SectionTitle subtitle="Transformações" title="Resultados que falam por si" />
           <FadeIn>
@@ -837,8 +833,7 @@ export default function App() {
                 lineHeight: 1.7,
               }}
             >
-              Cada procedimento é planejado individualmente, respeitando sua anatomia e seus
-              desejos para resultados verdadeiramente naturais.
+              Cada procedimento é planejado individualmente para resultados verdadeiramente naturais.
             </p>
           </FadeIn>
           <div
@@ -900,12 +895,12 @@ export default function App() {
             }}
           >
             {[
-              { emoji: '🛡️', title: 'Segurança Absoluta', desc: 'Ambiente médico controlado com protocolos rigorosos. Sua segurança é inegociável.' },
-              { emoji: '🎯', title: 'Naturalidade Garantida', desc: 'Técnicas que respeitam a harmonia do seu corpo. Resultado bonito é resultado que parece natural.' },
-              { emoji: '⚡', title: 'Recuperação Expressa', desc: 'Procedimentos minimamente invasivos. Volte à sua rotina no mesmo dia.' },
-              { emoji: '📋', title: '1 Ano de Acompanhamento', desc: 'Retornos mensais e suporte completo. Cuidamos de você muito além da sessão.' },
-              { emoji: '💎', title: 'Técnicas Exclusivas', desc: 'Métodos atualizados constantemente, trazendo o que há de mais avançado em estética médica.' },
-              { emoji: '📍', title: '3 Unidades Premium', desc: 'São Paulo, Alphaville e Campinas. Escolha a mais conveniente para você.' },
+              { emoji: '🛡️', title: 'Segurança Absoluta', desc: 'Ambiente médico controlado com protocolos rigorosos.' },
+              { emoji: '🎯', title: 'Naturalidade Garantida', desc: 'Técnicas que respeitam a harmonia do seu corpo.' },
+              { emoji: '⚡', title: 'Recuperação Expressa', desc: 'Volte à sua rotina no mesmo dia.' },
+              { emoji: '📋', title: '1 Ano de Acompanhamento', desc: 'Retornos periódicos e suporte completo.' },
+              { emoji: '💎', title: 'Técnicas Exclusivas', desc: 'O que há de mais avançado em estética médica.' },
+              { emoji: '📍', title: '3 Unidades Premium', desc: 'São Paulo, Alphaville e Campinas.' },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={i * 0.08}>
                 <BenefitCard item={item} />
@@ -921,7 +916,7 @@ export default function App() {
       <section
         id="form-section"
         style={{
-          background: `linear-gradient(180deg, ${colors.bgSecondary}, ${colors.bgPrimary})`,
+          background: colors.bgPrimary,
           padding: '100px 24px',
         }}
       >
@@ -1106,7 +1101,7 @@ export default function App() {
       <SectionSeparator />
 
       {/* ─── DEPOIMENTOS ─── */}
-      <section id="depoimentos" style={{ background: colors.bgSecondary, padding: '100px 24px' }}>
+      <section id="depoimentos" style={{ background: colors.bgPrimary, padding: '100px 24px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <SectionTitle subtitle="Depoimentos" title="Quem viveu, recomenda" />
           <div
@@ -1120,22 +1115,22 @@ export default function App() {
               {
                 photo: 'depoimento1.webp',
                 name: 'Maria J.',
-                text: 'Fiz o remodelamento glúteo e o resultado ficou absurdamente natural. Ninguém acredita que foi procedimento. Dr. Gatti tem mãos de artista!',
+                text: 'Resultado absurdamente natural. Ninguém acredita que foi procedimento. Dr. Gatti tem mãos de artista!',
               },
               {
                 photo: 'depoimento2.webp',
                 name: 'Ana S.',
-                text: 'Depois de anos insatisfeita, encontrei o Dr. Gatti. O resultado superou todas as expectativas. Me sinto outra pessoa — a confiança voltou!',
+                text: 'O resultado superou todas as expectativas. Me sinto outra pessoa — a confiança voltou!',
               },
               {
                 photo: 'depoimento3.webp',
                 name: 'Carla M.',
-                text: 'Os bioestimuladores mudaram minha pele. A cada mês vejo evolução. O atendimento é impecável do início ao fim.',
+                text: 'Os bioestimuladores mudaram minha pele. O atendimento é impecável do início ao fim.',
               },
               {
                 photo: 'depoimento4.webp',
                 name: 'Juliana R.',
-                text: 'O acompanhamento pós-procedimento é o grande diferencial. Me senti segura o tempo todo. Recomendo de olhos fechados!',
+                text: 'Acompanhamento impecável. Me senti segura o tempo todo. Recomendo de olhos fechados!',
               },
             ].map((dep, i) => (
               <FadeIn key={dep.name} delay={i * 0.1}>
@@ -1155,27 +1150,27 @@ export default function App() {
           {[
             {
               q: 'O preenchimento glúteo dói?',
-              a: 'O procedimento é realizado com anestesia local, garantindo conforto total durante toda a sessão. A maioria das pacientes relata apenas uma leve pressão, sem dor significativa. Nosso compromisso é com a sua experiência.',
+              a: 'Realizado com anestesia local, garantindo conforto total. A maioria das pacientes relata apenas uma leve pressão.',
             },
             {
               q: 'Quais são os riscos?',
-              a: 'Quando realizado por profissional qualificado em ambiente médico controlado, os riscos são mínimos. Utilizamos materiais de última geração e seguimos protocolos rigorosos de segurança em todos os procedimentos.',
+              a: 'Riscos mínimos quando realizado por profissional qualificado em ambiente controlado, com materiais de última geração.',
             },
             {
               q: 'Quantas sessões são necessárias?',
-              a: 'Para o remodelamento glúteo, geralmente uma única sessão é suficiente. Bioestimuladores podem necessitar de 2 a 3 sessões para o resultado ideal. Na sua avaliação, traçamos o plano completo.',
+              a: 'Remodelamento glúteo e minilipo: geralmente uma sessão. Bioestimuladores: 2 a 3 sessões. Na avaliação, traçamos o plano completo.',
             },
             {
               q: 'Quanto tempo dura o resultado?',
-              a: 'Os resultados do preenchimento glúteo são permanentes. Bioestimuladores têm efeito progressivo que pode durar de 2 a 3 anos. O endolaser apresenta melhorias contínuas ao longo dos meses.',
+              a: 'Preenchimento glúteo: permanente. Bioestimuladores: 2 a 3 anos. Minilipo: definitiva na região tratada.',
             },
             {
               q: 'Gestantes podem fazer o procedimento?',
-              a: 'Não. Durante gestação e amamentação, procedimentos estéticos invasivos são contraindicados. Sua segurança sempre vem em primeiro lugar.',
+              a: 'Não. Durante gestação e amamentação, procedimentos estéticos invasivos são contraindicados.',
             },
             {
               q: 'Como funciona o acompanhamento?',
-              a: 'Oferecemos acompanhamento completo por 12 meses, com retornos periódicos para garantir a melhor evolução do resultado. Você nunca estará sozinha nessa jornada.',
+              a: 'Acompanhamento completo por 12 meses com retornos periódicos para garantir a melhor evolução.',
             },
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.05}>
@@ -1195,7 +1190,7 @@ export default function App() {
       {/* ─── CTA FINAL ─── */}
       <section
         style={{
-          background: `radial-gradient(ellipse at center, rgba(201,168,76,0.05) 0%, ${colors.bgSecondary} 70%)`,
+          background: colors.bgPrimary,
           padding: '100px 24px',
           borderTop: `1px solid rgba(201,168,76,0.08)`,
           borderBottom: `1px solid rgba(201,168,76,0.08)`,
@@ -1225,8 +1220,7 @@ export default function App() {
                 marginBottom: '36px',
               }}
             >
-              Agende agora sua avaliação e descubra o plano ideal para você. Atendimento em São
-              Paulo, Alphaville e Campinas.
+              Agende sua avaliação e descubra o plano ideal para você.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
