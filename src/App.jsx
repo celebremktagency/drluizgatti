@@ -855,7 +855,7 @@ export default function App() {
               marginBottom: '48px',
             }}
           >
-            {[1, 2, 3, 4, 5].map((num, i) => (
+            {[1, 2, 3, 4, 5, 6].map((num, i) => (
               <FadeIn key={num} delay={i * 0.1}>
                 <div
                   style={{
