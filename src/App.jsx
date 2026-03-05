@@ -245,7 +245,7 @@ export default function App() {
 
     setTimeout(() => {
       window.open(
-        `https://wa.me/5511919148575?text=${encodeURIComponent(`Olá Dr. Gatti, gostaria de agendar uma avaliação! Meu nome é ${formData.nome}`)}`,
+        `https://wa.me/5511919148575?text=${encodeURIComponent(`Olá Dr. Gatti, gostaria de agendar uma consulta! Meu nome é ${formData.nome}`)}`,
         '_blank'
       )
     }, 1500)
@@ -337,7 +337,7 @@ export default function App() {
                   {link.label}
                 </a>
               ))}
-              <GoldButton onClick={scrollToForm}>Agende sua Avaliação</GoldButton>
+              <GoldButton onClick={scrollToForm}>Agende sua Consulta</GoldButton>
             </div>
           )}
 
@@ -398,7 +398,7 @@ export default function App() {
               </a>
             ))}
             <GoldButton onClick={() => { setMobileMenuOpen(false); scrollToForm() }}>
-              Agende sua Avaliação
+              Agende sua Consulta
             </GoldButton>
           </div>
         )}
@@ -549,7 +549,7 @@ export default function App() {
                 }}
               >
                 <GoldButton onClick={scrollToForm} large>
-                  Agende sua Avaliação
+                  Agende sua Consulta
                 </GoldButton>
                 <GoldOutlineButton href="https://instagram.com/dr.luizgatti">
                   <Instagram size={16} /> @dr.luizgatti
@@ -728,10 +728,9 @@ export default function App() {
           <FadeIn direction={isMobile ? 'up' : 'left'}>
             <div
               style={{
-                aspectRatio: '4/5',
-                borderRadius: '8px',
                 overflow: 'hidden',
-                border: `1px solid rgba(201,168,76,0.1)`,
+                aspectRatio: '16/13',
+                borderRadius: '8px',
               }}
             >
               <img
@@ -741,7 +740,7 @@ export default function App() {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                  objectPosition: 'center top',
+                  objectPosition: 'center center',
                   display: 'block',
                 }}
               />
@@ -850,34 +849,51 @@ export default function App() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-              gap: '20px',
+              gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
+              gap: '16px',
               marginBottom: '48px',
             }}
           >
             {[1, 2, 3, 4, 5, 6].map((num, i) => (
               <FadeIn key={num} delay={i * 0.1}>
-                <div
-                  style={{
-                    position: 'relative',
-                    aspectRatio: '4/5',
-                    borderRadius: '8px',
-                    overflow: 'hidden',
-                    background: `linear-gradient(135deg, ${colors.bgCard}, rgba(201,168,76,0.06))`,
-                    border: `1px solid ${colors.borderSubtle}`,
-                  }}
-                >
+                <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden' }}>
                   <img
                     src={`resultado${num}.webp`}
-                    alt={`Resultado de procedimento estético - antes e depois ${num}`}
+                    alt={`Resultado antes e depois ${num}`}
                     style={{
                       width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      objectPosition: 'center top',
                       display: 'block',
                     }}
                   />
+                  <span style={{
+                    position: 'absolute',
+                    bottom: '10px',
+                    left: '10px',
+                    fontFamily: fonts.body,
+                    fontSize: '11px',
+                    fontWeight: 700,
+                    letterSpacing: '2px',
+                    textTransform: 'uppercase',
+                    color: '#fff',
+                    background: 'rgba(0,0,0,0.6)',
+                    backdropFilter: 'blur(4px)',
+                    padding: '5px 12px',
+                    borderRadius: '20px',
+                  }}>Antes</span>
+                  <span style={{
+                    position: 'absolute',
+                    bottom: '10px',
+                    right: '10px',
+                    fontFamily: fonts.body,
+                    fontSize: '11px',
+                    fontWeight: 700,
+                    letterSpacing: '2px',
+                    textTransform: 'uppercase',
+                    color: colors.bgPrimary,
+                    background: colors.goldPrimary,
+                    padding: '5px 12px',
+                    borderRadius: '20px',
+                  }}>Depois</span>
                 </div>
               </FadeIn>
             ))}
@@ -885,7 +901,7 @@ export default function App() {
           <FadeIn>
             <div style={{ textAlign: 'center' }}>
               <GoldButton onClick={scrollToForm} large>
-                Agende sua avaliação gratuita
+                Agende sua consulta
               </GoldButton>
             </div>
           </FadeIn>
@@ -962,7 +978,7 @@ export default function App() {
                       marginBottom: '8px',
                     }}
                   >
-                    Agende sua Avaliação
+                    Agende sua Consulta
                   </h3>
                   <p
                     style={{
@@ -993,7 +1009,7 @@ export default function App() {
                     />
                     <div style={{ marginTop: '8px' }}>
                       <GoldButton type="submit" fullWidth large>
-                        AGENDAR MINHA AVALIAÇÃO GRATUITA
+                        AGENDAR MINHA CONSULTA
                       </GoldButton>
                     </div>
                   </form>
@@ -1063,7 +1079,7 @@ export default function App() {
               </h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '40px' }}>
                 {[
-                  'Avaliação personalizada e sem compromisso',
+                  'Consulta personalizada e sem compromisso',
                   'Plano de tratamento exclusivo para você',
                   'Condições especiais para quem agenda esta semana',
                 ].map((item, i) => (
@@ -1118,8 +1134,8 @@ export default function App() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))',
-              gap: '24px',
+              gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)',
+              gap: '20px',
             }}
           >
             {[
@@ -1169,7 +1185,7 @@ export default function App() {
             },
             {
               q: 'Quantas sessões são necessárias?',
-              a: 'Remodelamento glúteo e minilipo: geralmente uma sessão. Bioestimuladores: 2 a 3 sessões. Na avaliação, traçamos o plano completo.',
+              a: 'Remodelamento glúteo e minilipo: geralmente uma sessão. Bioestimuladores: 2 a 3 sessões. Na consulta, traçamos o plano completo.',
             },
             {
               q: 'Quanto tempo dura o resultado?',
@@ -1231,12 +1247,12 @@ export default function App() {
                 marginBottom: '36px',
               }}
             >
-              Agende sua avaliação e descubra o plano ideal para você.
+              Agende sua consulta e descubra o plano ideal para você.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
             <GoldButton onClick={scrollToForm} large>
-              AGENDAR MINHA AVALIAÇÃO
+              AGENDAR MINHA CONSULTA
             </GoldButton>
           </FadeIn>
           <FadeIn delay={0.3}>
@@ -1549,90 +1565,76 @@ function TestimonialCard({ dep }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: colors.bgCard,
-        border: `1px solid ${hovered ? colors.borderHover : colors.borderSubtle}`,
-        borderRadius: '8px',
-        padding: '32px',
+        background: hovered
+          ? `linear-gradient(145deg, rgba(201,168,76,0.08), ${colors.bgCard})`
+          : colors.bgCard,
+        borderRadius: '20px',
+        padding: '36px 28px 28px',
         position: 'relative',
-        transform: hovered ? 'translateY(-4px)' : 'none',
+        transform: hovered ? 'translateY(-6px)' : 'none',
+        boxShadow: hovered
+          ? '0 20px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(201,168,76,0.2)'
+          : '0 4px 20px rgba(0,0,0,0.15), 0 0 0 1px rgba(255,255,255,0.04)',
         transition,
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
       }}
     >
-      {/* Decorative quote */}
-      <span
-        style={{
-          position: 'absolute',
-          top: '16px',
-          left: '24px',
+      {/* Stars + quote icon */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
+        <div style={{ display: 'flex', gap: '3px' }}>
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} size={15} fill={colors.goldPrimary} color={colors.goldPrimary} />
+          ))}
+        </div>
+        <span style={{
           fontFamily: fonts.heading,
-          fontSize: '60px',
-          lineHeight: 1,
-          color: 'rgba(201,168,76,0.12)',
-          pointerEvents: 'none',
-        }}
-      >
-        "
-      </span>
-
-      {/* Stars */}
-      <div style={{ display: 'flex', gap: '4px', marginBottom: '16px', position: 'relative', zIndex: 1 }}>
-        {[...Array(5)].map((_, i) => (
-          <Star key={i} size={14} fill={colors.goldPrimary} color={colors.goldPrimary} />
-        ))}
+          fontSize: '48px',
+          lineHeight: 0.8,
+          color: colors.goldPrimary,
+          opacity: 0.25,
+        }}>"</span>
       </div>
 
       {/* Text */}
       <p
         style={{
-          fontSize: '14px',
-          lineHeight: 1.7,
+          fontSize: '15px',
+          lineHeight: 1.8,
           color: colors.textSecondary,
           flex: 1,
-          marginBottom: '20px',
-          position: 'relative',
-          zIndex: 1,
+          marginBottom: '24px',
+          fontStyle: 'italic',
         }}
       >
-        {dep.text}
+        "{dep.text}"
       </p>
 
-      {/* Divider */}
-      <div
-        style={{
-          width: '100%',
-          height: '1px',
-          background: `linear-gradient(90deg, transparent, rgba(201,168,76,0.1), transparent)`,
-          marginBottom: '16px',
-        }}
-      />
-
       {/* Author */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
         <div
           style={{
-            width: '44px',
-            height: '44px',
+            width: '48px',
+            height: '48px',
             borderRadius: '50%',
-            background: `linear-gradient(135deg, ${colors.bgPrimary}, rgba(201,168,76,0.1))`,
-            border: `1px solid rgba(201,168,76,0.15)`,
+            background: `linear-gradient(135deg, ${colors.goldPrimary}, rgba(201,168,76,0.6))`,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '16px',
-            overflow: 'hidden',
+            fontSize: '18px',
+            fontWeight: 700,
+            color: colors.bgPrimary,
             flexShrink: 0,
           }}
         >
           {dep.name.charAt(0)}
         </div>
         <div>
-          <p style={{ fontSize: '14px', fontWeight: 600, color: colors.textPrimary, marginBottom: '2px' }}>
+          <p style={{ fontSize: '15px', fontWeight: 600, color: colors.textPrimary, marginBottom: '3px' }}>
             {dep.name}
           </p>
-          <p style={{ fontSize: '11px', color: colors.textDim }}>Paciente verificada</p>
+          <p style={{ fontSize: '12px', color: colors.goldPrimary, fontWeight: 500 }}>Paciente verificada</p>
         </div>
       </div>
     </div>
