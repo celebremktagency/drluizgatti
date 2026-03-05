@@ -266,7 +266,8 @@ export default function App() {
 
   // ─── RENDER ───
   return (
-    <main style={{ fontFamily: fonts.body, overflowX: 'hidden' }}>
+    <div style={{ overflowX: 'hidden' }}>
+    <main style={{ fontFamily: fonts.body }}>
 
       {/* ─── NAVBAR ─── */}
       <nav
@@ -375,7 +376,7 @@ export default function App() {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '32px',
-              zIndex: 999,
+              zIndex: 1001,
             }}
           >
             {navLinks.map((link) => (
@@ -1446,6 +1447,7 @@ export default function App() {
         </svg>
       </a>
     </main>
+    </div>
   )
 }
 
