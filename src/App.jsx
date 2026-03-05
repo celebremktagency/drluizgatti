@@ -631,6 +631,7 @@ export default function App() {
                 <img
                   src="perfil.webp"
                   alt="Dr. Luiz Gatti"
+                  fetchpriority="high"
                   style={{
                     width: '100%',
                     height: '100%',
@@ -735,6 +736,7 @@ export default function App() {
             >
               <img
                 src="resultado-destaque.webp"
+                loading="lazy"
                 alt="Resultado de preenchimento glúteo e remodelamento corporal"
                 style={{
                   width: '100%',
@@ -860,6 +862,7 @@ export default function App() {
                   <img
                     src={`resultado${num}.webp`}
                     alt={`Resultado antes e depois ${num}`}
+                    loading="lazy"
                     style={{
                       width: '100%',
                       display: 'block',
